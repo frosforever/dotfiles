@@ -27,3 +27,6 @@
 # Remember to set up mergetool per machine
 # [mergetool "kdiff3"]
 #	cmd = \"PATH_TO_KDIFF\" $BASE $LOCAL $REMOTE -o $MERGED
+[rerere]
+	enabled = true
+	autoupdate = true
