@@ -1,0 +1,29 @@
+[user]
+	name = frosforever
+	email = frosforever@users.noreply.github.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+	lga = log --color --graph --name-status --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	co = checkout
+	cp = cherry-pick
+	st = status -sb # more concise status
+	ds = diff --staged
+	diffw = diff --word-diff # perhaps make this the default diff.
+	br = branch -v
+	blame = blame -wMC #ignore white space, moving text, moving text to other files
+	cam = commit -am
+	undo-commit = reset --soft HEAD^
+	springcleaning = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)' # show last commit date on branch
+	# The following were used when on gitsvn on windows.
+	# svnhead = log --grep=git-svn --pretty=format:'%h' -n 1 
+	# rb = "!sh -c 'git rebase -i $(git svnhead)'" 
+	# diffSVN = "!sh -c 'git diff $(git svnhead) HEAD'"
+	# rbmaster = "!sh -c 'git rebase -i $(git rev-parse master)'"
+[push]
+	default = simple
+[merge]
+	tool = kdiff3
+# Remember to set up mergetool per machine
+# [mergetool "kdiff3"]
+#	cmd = \"PATH_TO_KDIFF\" $BASE $LOCAL $REMOTE -o $MERGED
