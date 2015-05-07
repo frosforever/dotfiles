@@ -30,3 +30,5 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+[rebase]
+	autosquash = true
