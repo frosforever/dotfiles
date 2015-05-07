@@ -5,3 +5,6 @@ brew list:
 
 brew cask list:
   iterm2		 kitematic	  vagrant	   vagrant-manager  virtualbox
+  
+Others:
+  Spectacle Gitter
