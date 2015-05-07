@@ -1,0 +1,7 @@
+brew list:
+  ack		bash-completion	colordiff	ctags		git		macvim		qt		tree
+  ansible		boot2docker	coreutils	docker		kdiff3		node		readline	vim
+  bash		brew-cask	cscope		emacs		libyaml		pstree		sbt
+
+brew cask list:
+  iterm2		 kitematic	  vagrant	   vagrant-manager  virtualbox
