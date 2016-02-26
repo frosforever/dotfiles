@@ -94,3 +94,9 @@ alias mv="mv -i"
 
 # megaclean (delete target/ folders) all sbt/play projects in a given directory
 alias megaclean="find . -name target | xargs rm -Rf"
+
+# Docker Machine (may be OSx specific) Assumes docker-machine name is 'docker-vm'
+# set up env vars
+alias docker-setup='docker-machine start docker-vm; eval "$(/usr/local/bin/docker-machine env docker-vm)"'
+# clean up exited and dangling containers
+alias docker-cleanup='docker rm $(docker ps -a -f "name=_run_" -q) && docker rmi $(docker images -f "dangling=true" -q)'
