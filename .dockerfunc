@@ -1,0 +1,6 @@
+awslogs() {
+    docker run -it --rm \
+      -e AWS_DEFAULT_REGION=eu-west-1 \
+      -v ~/.aws/:/root/.aws:ro \
+      frosforever/awslogs "$@"
+}
