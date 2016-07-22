@@ -11,6 +11,7 @@
 	ds = diff --staged
 	diffw = diff --word-diff # perhaps make this the default diff.
 	br = branch -v
+	brs = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:blue)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(color:yellow)%(upstream:track)%(color:reset) %(contents:subject) - %(authorname) (%(color:green)%(committerdate:    relative)%(color:reset))'
 	blame = blame -wMC #ignore white space, moving text, moving text to other files
 	cam = commit -am
 	undo-commit = reset --soft HEAD^
