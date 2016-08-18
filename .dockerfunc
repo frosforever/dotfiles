@@ -4,3 +4,10 @@ awslogs() {
       -v ~/.aws/:/root/.aws:ro \
       frosforever/awslogs "$@"
 }
+
+# Fixes clock skew in xhyve host on machine wake
+# See https://docs.docker.com/docker-for-mac/troubleshoot/#/known-issues
+docker-clock-fix() {
+    docker run --rm \
+      --privileged alpine hwclock -s
+}
