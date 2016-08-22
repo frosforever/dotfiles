@@ -5,6 +5,13 @@ awslogs() {
       frosforever/awslogs "$@"
 }
 
+# https://github.com/frosforever/saws
+saws() {
+    docker run --rm -it \
+      -v ~/.aws/:/root/.aws:ro \
+      frosforever/saws$
+}
+
 # Fixes clock skew in xhyve host on machine wake
 # See https://docs.docker.com/docker-for-mac/troubleshoot/#/known-issues
 docker-clock-fix() {
