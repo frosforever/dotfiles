@@ -18,3 +18,15 @@ docker-clock-fix() {
     docker run --rm \
       --privileged alpine hwclock -s
 }
+
+# Set up IP alias so that host can be accessed from inside a container.
+# See https://forums.docker.com/t/access-host-not-vm-from-inside-container/11747/37
+docker-host-alias() {
+  ifconfig lo0 | grep 10.0.2.2 >/dev/null
+  if [ $? -ne 0 ]; then
+    sudo ifconfig lo0 alias 10.0.2.2
+    echo "docker host alias (10.0.2.2) set up and ready to use."
+  else
+    echo "docker host alias (10.0.2.2) is in good shape. Move along."
+  fi
+}
