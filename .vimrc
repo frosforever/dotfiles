@@ -55,7 +55,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'lsdr/monokai'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'nanotech/jellybeans.vim'
 Plugin 'bling/vim-airline'
 Plugin 'derekwyatt/vim-scala'
 
@@ -185,8 +185,12 @@ set shiftwidth=2
 set softtabstop=2
 set noexpandtab
 
-" Colorscheme in gVim
-colors monokai
+" Colorscheme
+if has('gui_running')
+  colorscheme monokai
+else
+  colorscheme jellybeans
+endif
 
 " Close buffer without loosing window split
 nmap <silent> <leader>d :bp\|bd #<CR>
