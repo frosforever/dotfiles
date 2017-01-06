@@ -1,3 +1,6 @@
+# To get bash completion for docker beta use
+# find /Applications/Docker.app -type f -name "*.bash-completion" -exec ln -s "{}" "$(brew --prefix)/etc/bash_completion.d/" \;
+
 awslogs() {
     docker run -it --rm \
       -e AWS_DEFAULT_REGION=eu-west-1 \
