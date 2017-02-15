@@ -4,7 +4,7 @@ brew list:
   bash		brew-cask	cscope		emacs		libyaml		pstree		sbt
 
 brew cask list:
-  iterm2		 kitematic	  vagrant	   vagrant-manager  virtualbox
+  iterm2		 kitematic	  vagrant	   vagrant-manager  virtualbox kdiff3
   
 Others:
   Spectacle Gitter
