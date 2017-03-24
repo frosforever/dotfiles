@@ -100,3 +100,6 @@ alias megaclean="find . -name target | xargs rm -Rf"
 alias docker-setup='docker-machine start docker-vm; eval "$(/usr/local/bin/docker-machine env docker-vm)"'
 # clean up exited and dangling containers
 alias docker-cleanup='docker rm $(docker ps -a -f "name=_run_" -q) && docker rmi $(docker images -f "dangling=true" -q)'
+
+# Colored trees!
+alias tree="tree -C"
