@@ -16,6 +16,7 @@
 	cam = commit -am
 	undo-commit = reset --soft HEAD^
 	springcleaning = for-each-ref --sort=-committerdate --format='%(refname:short) %(committerdate:short)' # show last commit date on branch
+	amend = commit --all --amend --no-edit
 	# The following were used when on gitsvn on windows.
 	# svnhead = log --grep=git-svn --pretty=format:'%h' -n 1 
 	# rb = "!sh -c 'git rebase -i $(git svnhead)'" 
