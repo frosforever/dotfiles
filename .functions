@@ -1,0 +1,4 @@
+# skip all the annoying .DS_Store and attribute files on mac when building a tar zip archive$
+targz() {
+  COPY_EXTENDED_ATTRIBUTES_DISABLE=true COPYFILE_DISABLE=true tar -c --exclude='.DS_Store' -vzf "$@"
+}
